@@ -1,0 +1,71 @@
+@import './reset.scss';
+@import './fonts.scss';
+@import './variables.scss';
+
+body {
+	font-family: $font-default;
+	background-color: #e3e3e3 !important;
+	color: #FFF;
+
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+}
+
+
+#app {
+	width: 320px;
+	height: 600px;
+	margin: 0 auto;
+	padding: 10px;
+	border-radius: 6px;
+
+	background-color: $color-bg;
+	box-shadow: 0 0 20px -5px rgba(0, 0, 0, .25);
+
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-end;
+	justify-content: space-between;
+}
+
+input#result {
+	width: 100%;
+	font-size: 72px;
+	text-align: right;
+	padding: 0 5px;
+	pointer-events: none;
+}
+
+button {
+	background-color: $color-main;
+	width: $size;
+	height: $size;
+	border-radius: 50%;
+	margin: 5px;
+	font-size: 24px;
+	text-transform: uppercase;
+	transition: transform .2s;
+
+	&.wide {
+		// width: $size * 2;
+		width: 145px;
+		border-radius: $size / 2;
+	}
+
+	&:active {
+		transform: translate3d(0, 2px, 0);
+	}
+
+	&.faded {
+		background-color: $color-faded;
+		color: $color-bg;
+		pointer-events: none;
+	}
+
+	&.accent {
+		background-color: $color-accent;
+	}
+}
+
+
